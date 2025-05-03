@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #0f1111;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            justify-content: space-evenly;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            background-image: url(amazon_logo.png);
+            background-size: cover;
+            height: 50px;
+            width: 100px;
+        }
+
+        .border {
+            border: 2px solid transparent;
+        }
+
+        .border:hover {
+            border: 2px solid white;
+        }
+
+        .nav-address {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+
+        .nav-address p {
+            margin: 0;
+            font-size: 14px;
+
+        }
+
+        .add-icon {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .add-icon p {
+            margin: 0;
+            font-size: 17px;
+            margin: 2px;
+        }
+
+        .nav-search {
+            display: flex;
+            background-color: rgba(187, 207, 207, 0.95);
+            width: 610px;
+            height: 40px;
+            border-radius: 4px;
+            justify-content: space-evenly;
+
+        }
+
+        .nav-search :hover {
+            border: 2px solid orange;
+
+        }
+
+        .search-select {
+            background-color: #f5f0f0;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            width: 50px;
+            text-align: center;
+            border: none;
+
+        }
+
+        .search-input {
+            font-size: 1rem;
+            width: 500%;
+            border: none;
+
+        }
+
+        .search-icon {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: #febd68;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #0f1111
+        }
+
+        span {
+            font-size: 0.7rem;
+        }
+
+        .nav-second {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .nav-cart i {
+            font-size: 30px;
+
+        }
+
+        .nav-cart {
+            font-size: 0.85rem;
+            font-weight: 700;
+
+        }
+
+        .panel {
+            height: 40px;
+            background-color: #222f3d;
+            display: flex;
+            color: #f5f0f0;
+            align-items: center;
+            justify-content: space-evenly
+        }
+
+        .panel-ops p {
+            display: inline;
+            margin-left: 30px;
+
+        }
+
+        .panel-ops {
+            font-size: 15;
+            width: 70%;
+            font-weight: bold;
+
+        }
+
+        .panel-deals {
+            font-size: 30;
+            font-weight: 900;
+        }
+
+        .hero-section {
+            background-image: url(pant.jpg);
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+
+        }
+
+        .hero-msg {
+            background-color: white;
+            color: #0f1111;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            width: 80%;
+            margin-bottom: 25px;
+        }
+
+        .hero-msg a {
+            color: #007585
+        }
+
+        .shop-section {
+    display: flex;
+    flex-wrap:wrap
+    justify-content: space-evenly;
+    gap: 15px;
+    background-color: #e2e7e6;
+    padding: 20px 0;
+}
+.box4{
+    height: 100%;
+}
+.box5{
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.box {
+    border: 1px solid #ddd;
+    height: 100%;
+    width: 20%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.box-img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.box-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.box-content p {
+    color: #3b7f88;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.box4{
+    height: 100%;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address">
+                <p>Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>India</p>
+                </div>
+
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Serch amazon.in" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                </div>
+
+            </div>
+            <div class="sign-in border">
+                <p><span>Hello, sign In</span></p>
+                <p class="nav-second">Acoounts & lists</p>
+            </div>
+            <div class="sign-in border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& orders</p>
+            </div>
+            <div class="nav-cart border">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+                cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p>fresh</p>
+                <p>mx player</p>
+                <p>sell</p>
+                <p>Best seller</p>
+                <p>Today Deals</p>
+                <p>Mobiles</p>
+                <p>Electronics</p>
+                <p>Customar Service</p>
+            </div>
+            <div class="panel-deals">
+                Shop deals in Electronic
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-msg">
+            <p>you are on amazon.com you can shop on amazon india for miillions of products with first local delivery.
+                <a>click here to go to amazon.in</a></p>
+        </div>
+
+    </div>
+    <div class="shop-section">
+        <div class="box box1">
+            <div class="box-content">
+                <h2>Pick up where you left off</h2>
+                <div class="box-img" style="background-image: url('box1_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="box-content">
+                <h2>Pick up where you left off</h2>
+                <div class="box-img" style="background-image: url('box2_image.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box box3">
+            <div class="box-content">
+                <h2>Get your game on</h2>
+                <div class="box-img" style="background-image: url('box4_image.jpg');"></div>
+                <p>Shop now</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="box-content">
+                <h2>Top categories in Kitchen appliances</h2>
+                <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+                <p>Explore</p>
+            </div>
+        </div>
+        <div class="box box4">
+            <div class="box-content">
+                <h2>Top categories in Kitchen appliances</h2>
+                <div class="box-img" style="background-image: url('box3_image.jpg');"></div>
+                <p>Explore</p>
+            </div>
+        </div><br>
+            <div class="box box5">
+                <div class="box-content">
+                    <h2>Top categories in Kitchen appliances</h2>
+                    <div class="box-img" style="background-image: url('box5_image.jpg');"></div>
+                    <p>Explore</p>
+                </div>
+                <div class="box box6">
+                    <div class="box-content">
+                        <h2>Top categories in Kitchen appliances</h2>
+                        <div class="box-img" style="background-image: url('box6_image.jpg');"></div>
+                        <p>Explore</p>
+                    </div>
+                    <div class="box box7">
+                        <div class="box-content">
+                            <h2>Top categories in Kitchen appliances</h2>
+                            <div class="box-img" style="background-image: url('box7_image.jpg');"></div>
+                            <p>Explore</p>
+                        </div>
+                        <div class="box box8">
+                            <div class="box-content">
+                                <h2>Top categories in Kitchen appliances</h2>
+                                <div class="box-img" style="background-image: url('box8_image.jpg');"></div>
+                                <p>Explore</p>
+                            </div>
+    
+</body>
+
+</html>
